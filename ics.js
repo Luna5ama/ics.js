@@ -155,7 +155,7 @@ var ics = function(uidDomain, prodId) {
 
           if (rrule.until) {
             var uDate = new Date(Date.parse(rrule.until)).toISOString();
-            rruleString += ';UNTIL=' + uDate.substring(0, uDate.length - 13).replace(/[-]/g, '') + '000000Z';
+            rruleString += ';UNTIL=' + uDate.substring(0, uDate.length - 13).replace(/[-]/g, '') + '000000';
           }
 
           if (rrule.interval) {

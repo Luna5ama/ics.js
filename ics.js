@@ -97,8 +97,8 @@ var ics = function(uidDomain, prodId) {
               return rrule.byday.indexOf(elem) == pos;
             });
 
-            for (var d in rrule.byday) {
-              if (BYDAY_VALUES.indexOf(rrule.byday[d]) < 0) {
+            for (var d of rrule.byday) {
+              if (BYDAY_VALUES.indexOf(d) < 0) {
                 throw "Recurrence rrule 'byday' values must include only the following: 'SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'";
               }
             }
